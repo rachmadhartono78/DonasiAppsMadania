@@ -10,7 +10,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.hartonostudio.donasiappsmadania.Model.ProgramDonasi;
 import com.hartonostudio.donasiappsmadania.databinding.FragmentHomeBinding;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeFragment extends Fragment {
 
@@ -37,7 +41,16 @@ public class HomeFragment extends Fragment {
 
     private void setupRecyclerView() {
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        // TODO: Set adapter once it's modernized
+        
+        // Data dummy untuk testing visual modernisasi
+        List<ProgramDonasi> list = new ArrayList<>();
+        list.add(new ProgramDonasi("Bantu Pembangunan Masjid Madania", "", 100000000, 65000000));
+        list.add(new ProgramDonasi("Sedekah Qur'an untuk Santri", "", 50000000, 20000000));
+        list.add(new ProgramDonasi("Donasi Sembako Dhuafa", "", 30000000, 25000000));
+        list.add(new ProgramDonasi("Wakaf Sumur Air Bersih", "", 75000000, 15000000));
+
+        ProgramDonasiAdapter adapter = new ProgramDonasiAdapter(list);
+        binding.recyclerView.setAdapter(adapter);
     }
 
     private void setupSearch() {

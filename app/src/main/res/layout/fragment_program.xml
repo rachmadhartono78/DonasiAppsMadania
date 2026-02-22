@@ -1,174 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/md_theme_background"
     tools:context=".Menu.Program.ProgramFragment">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
 
-        <RelativeLayout
+        <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="200dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <RelativeLayout
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="170dp"
+                android:layout_height="match_parent"
                 android:background="@drawable/half_rounded" />
 
             <TextView
-                android:id="@+id/your_favorite"
+                android:id="@+id/tv_header_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
                 android:fontFamily="@font/nunito_bold"
                 android:text="Program Donasi"
                 android:textColor="@color/white"
-                android:textSize="25sp" />
+                android:textSize="28sp" />
 
             <View
-                android:layout_width="30dp"
-                android:layout_height="5dp"
-                android:layout_below="@id/your_favorite"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/bg_search" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="100dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="15dp"
+                android:layout_width="40dp"
+                android:layout_height="6dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="85dp"
                 android:background="@drawable/bg_search"
-                android:elevation="50dp">
+                android:backgroundTint="@color/white" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:orientation="horizontal"
-                    android:paddingStart="5dp"
-                    android:paddingTop="10dp"
-                    tools:ignore="RtlSymmetry">
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@drawable/wakaf" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_program_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingTop="16dp"
+        android:paddingBottom="80dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginEnd="10dp"
-                            android:fontFamily="@font/nunito_extrabold"
-                            android:lines="2"
-                            android:maxLines="2"
-                            android:text="Ayo bantu donasi dian supaya bisa sekolah"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="10dp"
-                            android:fontFamily="@font/nunito_extrabold"
-                            android:lines="1"
-                            android:maxLines="1"
-                            android:text="Santri Balita Madania"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="14sp" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_gravity="end"
-                            android:layout_marginEnd="20dp"
-                            android:background="@drawable/bg_button"
-                            android:text="Donate Now"
-                            android:textAllCaps="false" />
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="270dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="15dp"
-                android:background="@drawable/bg_search"
-                android:elevation="50dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:orientation="horizontal"
-                    android:paddingStart="5dp"
-                    android:paddingTop="10dp"
-                    tools:ignore="RtlSymmetry">
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@drawable/mandiri" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginEnd="10dp"
-                            android:fontFamily="@font/nunito_bold"
-                            android:lines="2"
-                            android:maxLines="2"
-                            android:text="Bantu Choki agar bisa sembuh"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="10dp"
-                            android:fontFamily="@font/nunito_bold"
-                            android:lines="1"
-                            android:maxLines="1"
-                            android:text="Santri balita Madania"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="14sp" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_gravity="end"
-                            android:layout_marginEnd="20dp"
-                            android:background="@drawable/bg_button"
-                            android:text="Donate Now"
-                            android:textAllCaps="false" />
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-        </RelativeLayout>
-    </LinearLayout>
-
-</FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
