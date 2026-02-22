@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Modern Material 3 Inspired Palette -->
+    <color name="md_theme_primary">#006A60</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primaryContainer">#74F8E5</color>
+    <color name="md_theme_onPrimaryContainer">#00201C</color>
+
+    <color name="md_theme_secondary">#4A635F</color>
+    <color name="md_theme_onSecondary">#FFFFFF</color>
+
+    <color name="md_theme_background">#FAFDFB</color>
+    <color name="md_theme_surface">#FAFDFB</color>
+    <color name="md_theme_onSurface">#191C1B</color>
+
+    <!-- Legacy support & Keep existing custom colors -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -7,17 +21,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="teal">#0c9869</color>
+    <color name="teal">#006A60</color> <!-- Updated to match new primary -->
 
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-    <!--Costum Colors-->
+    <color name="colorPrimary">#006A60</color>
+    <color name="colorPrimaryDark">#005048</color>
+    <color name="colorAccent">#74F8E5</color>
+
     <color name="colorPrimaryDark_blue">#203DD1</color>
     <color name="colorSecondary_blue">#2596f7</color>
     <color name="colorGreyPrimary">#8D8D8D</color>
     <color name="colorBlackPrimary">#21272C</color>
-    <color name="bgPrimary">#EDF1F8</color>
+    <color name="bgPrimary">#F0F4F3</color>
     <color name="greenPrimary">#1abc9c</color>
-    <color name="nav_color" />
 </resources>
